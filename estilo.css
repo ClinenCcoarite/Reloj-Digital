@@ -1,0 +1,126 @@
+body {
+    background-image: url(./reloj.jpg);
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    min-height: 20vh;
+    width: 20rem;
+    height: 20rem;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    padding: 2rem;
+
+    background: rgb(27,25,68);
+background: radial-gradient(circle, rgba(27,25,68,0.9920343137254902) 7%, rgba(149,149,167,1) 86%);
+}
+
+
+.watch-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateY(-3px);
+
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.005s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.hand-sec::after {
+    content: "";
+    width: 20%;
+    height: 16px;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    background-size: 50%;
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: -90%;
+    right: 90%;
+    transform: rotate(270deg);
+}
+
+.hand-hour::after {
+    content: "";
+    width: 25%;
+    height: 16px;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    background-size: 50%;
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: -10%;
+    right: 90%;
+    transform: rotate(270deg);
+}
+
+.hand-min::after {
+    content: "";
+    width: 25%;
+    height: 16px;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    background-size: 50%;
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: -30%;
+    right: 90%;
+    transform: rotate(270deg);
+}
+.hand-hour {
+    height: 12px;
+    width: 30%;
+    top: 50%;
+    left: 20%;
+}
+
+.hand-min {
+    height: 10px;
+    width: 45%;
+    top: 50%;
+    left: 5%;
+}
+
+.hora-act {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 1rem;
+}
+
+.hora-container {
+    background-color: rgba(146, 160, 160, 0.603);
+    border-radius: 30px;
+    width: 30%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+
+.hora {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    align-self: center;
+}
