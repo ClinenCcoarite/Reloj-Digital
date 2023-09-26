@@ -21,7 +21,7 @@ function setDate() {
     const hour = now.getHours();
     const hourDegress = ((hour / 12) * 360) + 90;
     hourHand.style.transform = `rotate(${hourDegress}deg)`;
-    lect[0].innerHTML = Math.round((hour) - 12) + " : ";
+    lect[0].innerHTML = ((hour) - 12) + " : ";
     hour >= 12 ? good.innerHTML=" PM" : good.innerHTML=" AM";
 }
 setInterval(setDate, 1000);
